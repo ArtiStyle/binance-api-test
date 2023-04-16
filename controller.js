@@ -1,7 +1,7 @@
 class BitcoinController {
     #bitcoin
     #bitcoinPrices
-    #commission = 0.01
+    #commission = process.env.BITCOIN_COMMISSION
     constructor() {
         setInterval(async () => {
             await this.#syncBitcoin()
